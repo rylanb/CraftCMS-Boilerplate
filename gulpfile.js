@@ -32,7 +32,7 @@ var JS = [
 ];
 
 var VENDOR_JS = [
-  SRC + '/vendor/*.js'
+  SRC + '/js/vendor/*.js'
 ]
 
 var IMAGE_SRC = [
