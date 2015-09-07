@@ -5,13 +5,13 @@
 # @TODO - consider excluding dev and live database files.
 # ------------------------------------------------------------
 craft/config/local/*
+craft/app
 
 
 # IMAGE FOLDERS
 # Commented out for convenience. Probably worth excluding as repo gets larger.
 # ------------------------------------------------------------
-# /public/content/*
-# !/public/content/index.html
+/public/dist/*
 
 
 # CRAFT STORAGE STUFF
@@ -20,7 +20,9 @@ craft/config/local/*
 # ------------------------------------------------------------
 craft/storage/runtime/*
 craft/storage/backups/*
+craft/config/license.key
 
+*.sql
 
 # MISC FILES
 # ------------------------------------------------------------
@@ -37,3 +39,4 @@ _notes
 dwsync.xml
 logs/*
 node_modules
+
