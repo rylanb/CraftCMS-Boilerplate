@@ -59,8 +59,10 @@ via the command line or install with homebrew (Mac OS):
 	- `npm install -g gulp`
 2. Install gulp modules defined in package.json:
  	- `npm install`
-3. Gulp away by running (watch is the default task): 
-	- `gulp` or `gulp watch` 
+3. Gulp away by running:
+	- `gulp`
+	-  ^ to run default tasks array or to just watch for new changes:
+	- `gulp watch`
 
 
 Feel free to modify the .scss-lint.yml file to match your preferences on how to lint your scss files.
