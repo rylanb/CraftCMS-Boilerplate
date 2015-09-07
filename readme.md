@@ -1,7 +1,8 @@
 CraftCMS Boilerplate
 ==============================
 
-**Pixel & Tonic say the /craft/app folder should not be in source control. Make sure to insert that folder from the craft download from [Build With Craft](http://buildwithcraft.com/)**
+** Get the latest Craft download from: [Build With Craft](http://buildwithcraft.com/)**
+** Having the /craft/app folder in source control is a personal decision, but you want the most recent version, regardless.**
 
 ### Installation
 1. First create local database (phyMyAdmin or Sequel Pro are your friends)
