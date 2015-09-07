@@ -2,7 +2,8 @@ CraftCMS Boilerplate
 ==============================
 
 ** Get the latest Craft download from: [Build With Craft](http://buildwithcraft.com/)**
-** Having the /craft/app folder in source control is a personal decision, but you want the most recent version, regardless.**
+
+** Having the /craft/app folder in source control is a personal decision, but you want the most recent version, regardless. Pixel & Tonic's Craft CMS license indicates that no one besides P&T is _allowed_ to redistribute the `/craft/app` folder. Tread lightly.**
 
 ### Installation
 1. First create local database (phyMyAdmin or Sequel Pro are your friends)
