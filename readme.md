@@ -1,11 +1,11 @@
 CraftCMS Boilerplate
 ==============================
 
-**Due to some reasons given by P&T the /craft/app folder has been removed, make sure if you clone this repo to replace that folder from the base craft download**
+**Pixel & Tonic say the /craft/app folder should not be in source control. Make sure to insert that folder from the craft download from [Build With Craft](http://buildwithcraft.com/)**
 
 ### Installation
-1. First create local database
-2. Create db.php and general.php files within /craft/config/local/
+1. First create local database (phyMyAdmin or Sequel Pro are your friends)
+2. Rename db.example.php -> db.php and general.example.php -> general.php files within /craft/config/local/
 
 ```php
     db.php
@@ -48,20 +48,25 @@ CraftCMS Boilerplate
     );
 ```
 
-Now that you've put the correct database credentials in db.php, head on over to /admin and if all is well will start the installation process
+Now that you've put the correct database credentials in db.php, head on over to /admin and if all is well will start the installation process. Running with [MAMP](https://www.mamp.info/en/) is fairly easy and it comes with phpMyAdmin.
 
 
 ### Gulpjs
 If you don't already have Node installed head over to http://nodejs.org/download/
-via the command line:
+via the command line or install with homebrew (Mac OS):
 
-1. Install gulp `npm install -g gulp`
-2. Install gulp modules defined in package.json `npm install`
-3. Gulp away by running `gulp`
+1. Install gulp (-g means global):
+	- `npm install -g gulp`
+2. Install gulp modules defined in package.json:
+ 	- `npm install`
+3. Gulp away by running (watch is the default task): 
+	- `gulp` or `gulp watch` 
 
-feel free to modify the .scss-lint.yml file to your hearts content on how to lint you scss files.
+
+Feel free to modify the .scss-lint.yml file to match your preferences on how to lint your scss files.
 
 
 ### .htaccess and .gitignore
-The default .htaccess is packed with a bunch of goodies, again feel free to modify to your hearts content. Just make sure to add a period before the file name to make sure its read properly.
-The default .gitignore file is setup to track unecessary folders and files, most of it involves not tracking random config files computers will add, as well as node_modules and some stuff within the craft/storage folder
+The default .htaccess is packed with a bunch of goodies, modify as you see fit. Just make sure to add a period before the file name to make sure its read properly.
+
+The default .gitignore file is setup to not track unecessary folders and files, most of it involves ignoring config files, as well as node_modules and other assorted craft/app and craft/storage folders and files.
