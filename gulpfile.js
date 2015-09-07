@@ -36,7 +36,7 @@ var VENDOR_JS = [
 ]
 
 var IMAGE_SRC = [
-  'public/images/**/*'
+  SRC + '/images/**/*'
 ]
 
 // SCSS Linting, Compiling and Minification
@@ -126,6 +126,7 @@ gulp.task("scripts", function() {
     .pipe( notify('Scripts Finished') );
 });
 
+//Just copy over the vendor js. Don't need to jshint, uglify, etc.
 gulp.task('vendor-js', function() {
   return gulp.src( VENDOR_JS )
   .pipe(plumber({
