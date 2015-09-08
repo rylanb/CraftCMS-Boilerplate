@@ -175,21 +175,16 @@ gulp.task('clean', function() {
 gulp.task('watch', function() {
 
   // Listen on port 35729
-  server.listen(35729, function (err) {
-    if (err) {
-      return console.log(err);
-    }
+  livereload.listen();
 
-    // Watch .scss files
-    gulp.watch(SRC + '/styles/**/*.scss', ['scss-lint', 'styles']);
+  // Watch .scss files
+  gulp.watch(SRC + '/styles/**/*.scss', ['scss-lint', 'styles']);
 
-    // Watch .js files to lint and build
-    gulp.watch(SRC + '/js/**/*.js', ['scripts', 'vendor-js']);
+  // Watch .js files to lint and build
+  gulp.watch(SRC + '/js/**/*.js', ['scripts', 'vendor-js']);
 
-    // Watch image files
-    gulp.watch( 'public/images/**/*', ['image-min']);
-
-  });
+  // Watch image files
+  gulp.watch( 'public/images/**/*', ['image-min']);
 
 });
 
