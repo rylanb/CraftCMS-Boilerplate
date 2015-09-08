@@ -45,7 +45,7 @@
     <script src="/dist/js/vendor/jquery-1.11.3.min.js"></script>
     <script src="/dist/js/main.js"></script>
 
-    {% if craft.config.devMode %}
+    {% if not craft.config.devMode %}
       {% include '_partials/_google_analytics.html' %}
     {% endif %}
 
