@@ -30,11 +30,11 @@ var JS = [
 
 var VENDOR_JS = [
   SRC + '/js/vendor/*.js'
-]
+];
 
 var IMAGE_SRC = [
   SRC + '/images/**/*'
-]
+];
 
 // SCSS Linting, Compiling and Minification
 var scssLintReporter = function(file) {
