@@ -71,6 +71,8 @@ via the command line or install with homebrew (Mac OS):
 
 Feel free to modify the .scss-lint.yml file to match your preferences on how to lint your scss files.
 
+### Global Meta Information for Templates
+I setup the templates to have global fields required for Meta Information (metaInformation.metaDescription and metaInformation.metaPageTitle). This is for SEO.  The two variables are set at the top of main_layout.html. Take 'em out if you don't need a default global SEO and the ability to then override in sub-pages.
 
 ### .htaccess and .gitignore
 The default .htaccess is packed with a bunch of goodies, modify as you see fit. Just make sure to add a period before the file name to make sure its read properly.
