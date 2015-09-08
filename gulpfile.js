@@ -140,14 +140,15 @@ gulp.task('vendor-js', function() {
 // Image Minification
 gulp.task('image-min', function () {
   return gulp.src( IMAGE_SRC )
-    .pipe(imagemin({
+    .pipe( changed(DIST_DIR + '/images') )
+    .pipe( imagemin({
         progressive: true,
         svgoPlugins: [{removeViewBox: true}],
         use: [pngquant()]
       })
     )
-    .pipe(gulp.dest( DIST_DIR + '/images' ))
-    .pipe(notify('Images compressed'));
+    .pipe( gulp.dest( DIST_DIR + '/images' ) )
+    .pipe( notify('Images Compressed') );
 });
 
 // Fonts
