@@ -1,7 +1,7 @@
 // Ah, Big Gulp's eh? Welp, see ya later.
 var gulp          = require('gulp'),
     autoprefixer  = require('gulp-autoprefixer'),
-    c             = require('chalk'),
+    chalk         = require('chalk'),
     concat        = require('gulp-concat'),
     changed       = require('gulp-changed'),
     del           = require('del'),
@@ -9,7 +9,6 @@ var gulp          = require('gulp'),
     imagemin      = require('gulp-imagemin'),
     jshint        = require('gulp-jshint'),
     livereload    = require('gulp-livereload'),
-    map           = require('map-stream'),
     minifycss     = require('gulp-minify-css'),
     notify        = require('gulp-notify'),
     plumber       = require('gulp-plumber'),
@@ -46,9 +45,9 @@ var scssLintReporter = function(file) {
     // Loop through the warnings/errors and spit them out
     file.scsslint.results.forEach(function(result) {
       var msg =
-         c.cyan(file.path) + ':' +
-         c.red(result.line) + ' ' +
-         ('error' === result.severity ? c.red('[E]') : c.cyan('[W]')) + ' ' +
+         chalk.cyan(file.path) + ':' +
+         chalk.red(result.line) + ' ' +
+         ('error' === result.severity ? chalk.red('[E]') : chalk.cyan('[W]')) + ' ' +
          result.reason;
       gutil.log(msg);
     });
