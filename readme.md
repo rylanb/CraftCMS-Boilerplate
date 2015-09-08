@@ -5,6 +5,9 @@ CraftCMS Boilerplate
 
 ** Having the /craft/app folder in source control is a personal decision, but you want the most recent version, regardless. Pixel & Tonic's Craft CMS license indicates that no one besides P&T is _allowed_ to redistribute the `/craft/app` folder. Tread lightly.**
 
+** Please create an issue if you run into a problem. I want this to help not hinder. It is a bit of a learning experiment for me, I could be wrong in an implementation or setting. I can't fix it if you don't let me know.
+
+
 ### Installation
 1. First create local database (phyMyAdmin or Sequel Pro are your friends)
 2. Rename db.example.php -> db.php and general.example.php -> general.php files within /craft/config/local/
