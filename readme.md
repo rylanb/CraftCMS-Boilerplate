@@ -71,7 +71,12 @@ via the command line or install with homebrew (Mac OS):
 	-  ^ to run default tasks array or to just watch for new changes:
 	- `gulp watch`
 
-
+### Running
+  Using Mamp, I recommend running it on craft.dev for local settings to work. You can update your /etc/hosts file to have:
+  ```
+    127.0.0.1       craft.dev
+  ```
+  then run on craft.dev:8888 (if using MAMP 8888 will work if that's how you set up your Apache Port)
 Feel free to modify the .scss-lint.yml file to match your preferences on how to lint your scss files.
 
 ### Global Meta Information for Templates
