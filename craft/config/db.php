@@ -36,8 +36,8 @@ $customDbConfig = array(
 // If a local db file exists, merge the local db settings
 if (is_array($customLocalDbConfig = @include(CRAFT_CONFIG_PATH . 'local/db.php')))
 {
-	$customGlobalDbConfig = array_merge($customDbConfig['*'], $customLocalDbConfig);
-  $customDbConfig['*'] = $customGlobalDbConfig;
+  $customGlobalDbConfig = array_merge($customDbConfig['.dev'], $customLocalDbConfig);
+  $customDbConfig['.dev'] = $customGlobalDbConfig;
 }
 
 return $customDbConfig;

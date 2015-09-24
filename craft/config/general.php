@@ -58,7 +58,7 @@ $customConfig = array(
   ),
 
   // ------------------------------------------------------------
-  // Environment: Development
+  // Environment: Staging
   // ------------------------------------------------------------
   'staging.' => array(
 
@@ -82,7 +82,11 @@ $customConfig = array(
     'userSessionDuration'           => 'P101Y',
     'rememberedUserSessionDuration' => 'P101Y',
     'rememberUsernameDuration'      => 'P101Y',
-
+  ),
+  // ------------------------------------------------------------
+  // Environment: Development
+  // ------------------------------------------------------------
+  '.dev' => array(
   )
 
 );
@@ -90,8 +94,8 @@ $customConfig = array(
 // If a local config file exists, merge any local config settings
 if (is_array($customLocalConfig = @include(CRAFT_CONFIG_PATH . 'local/general.php')))
 {
-  $customGlobalConfig = array_merge($customConfig['*'], $customLocalConfig);
-  $customConfig['*'] = $customGlobalConfig;
+  $customGlobalConfig = array_merge($customConfig['.dev'], $customLocalConfig);
+  $customConfig['.dev'] = $customGlobalConfig;
 }
 
 return $customConfig;
